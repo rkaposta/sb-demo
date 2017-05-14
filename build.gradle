@@ -1,0 +1,29 @@
+plugins {
+    id 'org.springframework.boot' version '1.5.3.RELEASE'
+}
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+war {
+    baseName = 'myapp'
+    version =  '0.5.0'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.2.RELEASE'
+    // compile group: 'org.springframework.boot', name: 'spring-boot-starter-undertow', version: '1.5.2.RELEASE'
+    
+    compile group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '1.5.2.RELEASE'
+    
+	compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '1.5.2.RELEASE'
+
+    
+    
+    compile 'org.slf4j:slf4j-api:1.7.21'
+
+}
