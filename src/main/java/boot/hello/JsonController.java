@@ -30,11 +30,4 @@ public class JsonController {
     String get() throws JsonProcessingException {
     	return objectMapper.writeValueAsString(new MyData("A válasz az életre, a világmindenségre, meg mindenre", 42));
     }
-    
-    
-    @RequestMapping("/jsonUpdate")
-    @ResponseBody
-    String update(@RequestParam MyData myData) throws JsonProcessingException {
-    	return objectMapper.writeValueAsString(myData);
-    }
 }
